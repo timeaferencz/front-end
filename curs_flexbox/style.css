@@ -1,0 +1,82 @@
+:root {
+  --nav-width: 5rem;
+  --bg-color-primary: rgb(39, 32, 32);
+  --bg-color-secondary: rgb(194, 180, 180);
+  --bg-color-selected: hotpink;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+  margin-left: var(--nav-width);
+  padding-left: 1rem;
+
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.navbar {
+    position: fixed;
+
+    background-color: var(--bg-color-primary);
+    
+    width: var(--nav-width);
+    height: 100vh;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+
+    height: 5rem;
+
+    text-decoration: none;
+    color: var(--bg-color-secondary);
+}
+.nav-link svg {
+    height: 2rem;
+    padding-left: 1rem;
+}
+
+.nav-link span {
+    display: none;
+
+    margin-left: 2rem;
+}
+
+.navbar:hover .nav-link span {
+    display: inline;  
+}
+
+.navbar:hover {
+    width: 16rem;
+}
+
+.nav-item:hover .nav-link svg {
+    color: var(--bg-color-selected);
+}
+
+.nav-link:hover {
+    background-color: rgb(20, 20, 20);
+    border-bottom:1px solid green;
+}
+
+.navbar-nav .nav-item:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom:1px solid green;
+}
+
+
+.navbar-nav .nav-item:first-child {
+   background-color: rgb(20, 20, 20);
+}
+

@@ -87,3 +87,6 @@ footer {
 ::placeholder {
     color: #929292;
 }
+label {
+    display: inline-block;
+}

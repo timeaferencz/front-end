@@ -1,0 +1,281 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  :root {
+      --nav-width: 5rem;
+      --bg-color-primary: rgb(253, 163, 14);
+      --font-color-primary: rgb(194, 180, 180);
+      --bg-color-selected: hotpink;
+  }
+.arrivals{
+    margin: auto 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    align-content: center;
+    grid-gap: 10px;
+}
+
+.arrivals-promo{
+    display: flex;
+    flex-direction: column;  
+}
+
+.arrivals-promo section{
+    
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 2;
+    flex: 1;
+
+}
+.arrivals-wedding1{
+  
+   background-image: url('assets/wed1.jpg');
+  
+}
+.arrivals-weddding2 {
+      background-image: url('assets/wed2.jpg');
+}
+.arrivals-wedding1, .arrivals-weddding2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-size: 100% 100%;
+    height: 300px;
+   
+}
+.promo{
+    margin: auto 15px;
+    display: grid;
+    grid-template-columns: repeat(3,  1fr); 
+}
+.promo-container {
+    background-color: rgb(214, 214, 214);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.promo img:nth-of-type(2) {
+     grid-row: 1 / span 2;
+     grid-column: 3/-1;
+}
+.promo img {
+    width: 100%;
+}
+.promo-container p:nth-of-type(2) {
+    color: var(--bg-color-primary);
+    font-size: 3rem;
+}
+.shop-list{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.shop-item{
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.shop-item-description{
+    color: var(--bg-color-primary);
+    text-align: center;
+}
+.shop-item-price{
+    display: flex;
+}
+.shop-item-new-price {
+    padding: 5px;
+    color: black;
+}
+.shop-item-old-price{
+    padding: 5px;
+    color: gray;
+    text-decoration: line-through;
+  
+}
+.shop-item-button{
+    background-color: var(--bg-color-primary);
+    width: 5rem;
+    white-space:nowrap;
+    text-align: center;
+}
+body {
+      background-color: white;
+}
+.buy-process-container{
+    background-image: url('assets/new4.jpg');
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+  
+}
+.buy-process:nth-of-type(1) {
+    grid-area: buy-process-area-1;
+}
+.buy-process:nth-of-type(2) {
+    grid-area: buy-process-area-2;
+}
+.buy-process:nth-of-type(3) {
+    grid-area: buy-process-area-3;
+}
+.buy-process svg{
+    height: 2.5rem;
+    color: white;
+    background-color: var(--bg-color-primary);
+    padding: 0.5rem;
+    border-radius:1.5rem;
+}
+.buy-process-action {
+    color: white;
+}
+.buy-process-action-description {
+    color: white;
+}
+.buy-process-description {
+    color: var(--bg-color-primary);
+    grid-area: buy-description-area;
+}
+.shop-footer{
+    display: grid;
+    gap: 10px;
+    /*grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));*/
+   
+}
+.shop-footer h3 {
+    color: var(--bg-color-primary);
+}
+.shop-footer-info svg,
+.shop-footer-store-info svg{
+      height: 2rem;
+      color: gray;
+      background-color: white;
+      padding: 0.5rem ;
+      border-radius:1rem;
+      border: 1px solid gray;
+}
+.shop-footer ul li{
+    color: gray;
+    list-style-type: none;
+   
+    
+}
+.shop-footer-info {
+    grid-area: info;
+}
+.shop-footer-store-info {
+    grid-area: store-info;
+}
+.shop-footer-info ul li span{
+   
+
+}
+.shop-footer-info ul {
+    display: flex;
+    flex-direction: column;
+}
+.shop-footer-flickr{
+
+    display: grid;
+    grid-template-rows: repeat(3, 80px);
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+}
+.shop-footer-flickr img{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+}
+.shop-footer-flickr-area {
+    grid-area: flickr;
+}
+.shop-footer-input{
+    grid-area: input-area;
+    align-self: center;
+}
+.shop-footer-label {
+    grid-area: input-label;
+    align-self: center;
+}
+.shop-footer-logo{
+    grid-area: logo;
+}
+.shop-footer-description {
+    grid-area: description;
+}
+/* Phone */
+@media screen and (max-width: 320px) {
+    .promo {
+         display: none;
+    }
+    .arrivals {
+  
+      grid-template-columns: 1fr;
+  
+    }
+   .buy-process-container {
+          grid-template-columns: 1fr;
+          grid-template-areas: "buy-description-area"
+                               "buy-process-area-1"
+                               "buy-process-area-2"
+                               "buy-process-area-3";
+   }
+  .shop-footer {
+      
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "logo"
+      "description"
+      "input-label"
+      "input-area"
+      "info"
+      "store-info"
+      "flickr";
+  }
+}
+/*Tablet */
+@media only screen and (min-width:321px) and (max-width:768px) {
+     .promo {
+         display: none;
+     }
+    .buy-process-container {
+           grid-template-columns: repeat(3, 1fr);
+           grid-template-areas: "buy-description-area buy-description-area buy-description-area"
+                                "buy-process-area-1 buy-process-area-2 buy-process-area-3"     
+    }
+    .shop-footer {
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "logo . ."
+            "description description description"
+            "input-label input-label input-area"
+            "info store-info flickr"
+    }
+
+}
+/* Desktop */
+@media only screen and (min-width: 769px) {
+  
+   .buy-process-container {
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-areas: "buy-description-area buy-process-area-1 buy-process-area-2 buy-process-area-3";
+   }
+   .shop-footer {
+   
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-areas:
+         "logo input-label input-area input-area"
+         "description info store-info flickr";
+ }
+
+}

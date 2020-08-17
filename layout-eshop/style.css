@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --nav-width: 5rem;
+    --bg-color-primary: rgb(253, 163, 14);
+    --font-color-primary: rgb(194, 180, 180);
+    --bg-color-selected: hotpink;
+}
+body{
+    background-color: black;
+    
+}
+.container{
+    height: 100vh;
+}
+.header{
+    background-color: white;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo{
+    margin-right: 10px;
+}
+
+.header-search {
+    padding-left: 3vh;
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    height: 6vh;
+    align-items: center;
+    color: var(--font-color-primary);
+    border-left: 1px solid rgb(182, 181, 181);
+    border-top: 1px solid rgb(182, 181, 181);
+    border-bottom: 1px solid rgb(182, 181, 181);
+}
+.header-search-input{
+    flex-grow: 2;
+}
+.header-search-filter{
+    white-space: nowrap;
+    padding-right: 5px;
+    padding-left: 5px;
+    height: 100%;
+    line-height: 6vh;
+    border-left: 1px solid rgb(182, 181, 181);
+}
+.header-search-icon{
+    background-color: var(--bg-color-primary);
+    height:6vh;
+}
+.header-search-arrow {
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 1.5vh;
+}
+.header-social{
+    padding-top: 3vh;
+}
+navbar {
+    background-color: black;
+}
+
+navbar svg{
+      height: 2rem;
+      padding: 0.25rem;
+      color:white;
+      border: 1px solid white;
+}
+.nav-item {
+    color: white; 
+    margin-bottom: 3px;
+    text-align: center;
+}
+.nav-item span{
+    border-bottom: 2px solid var(--bg-color-primary);
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+
+}
+
+.menu {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+.menu-item {
+   color: rgb(71, 70, 70);
+   list-style: none;
+   padding-top: 2px;
+   text-align: center;
+}
+
+@media (min-width: 1281px) {
+    body {
+        background-image: url("./assets/ba3.jpg");
+     
+    }
+     .menu {
+         background-color: white;
+     }
+     .menu-item {
+         color: black;
+         list-style: none;
+     }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 1280px) {
+    body {
+        background-color: black;
+    }
+    .header {
+        display:none;
+    }
+    
+}

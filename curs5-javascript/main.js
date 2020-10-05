@@ -98,6 +98,7 @@ const obj = {
 console.log(obj);
 obj.altul0='Paul';
 */
+/** 
 console.log(1);
 setTimeout(() => console.log(2), 1000);
 setTimeout(() => console.log(3), 0);
@@ -105,3 +106,30 @@ for(let i = 0; i < 100; i++ ){
     console.log(8);
 }
 console.log(4);
+*/
+function isValidNumber(x){
+    return !isNaN(x);
+}
+console.log(isValidNumber(11-'a'));
+function switchNumber(a, b){
+    let aux=a;
+    a=b;
+    b=aux;
+}
+let a=2;
+let b=3;
+
+switchNumber(a,b);
+console.log(a);
+const rectangles = [
+    { id: 1, name: "Floor 1", sideA: 10, sideB: 5, unit: "m" },
+    { id: 2, name: "Floor 2", sideA: 6, sideB: 8, unit: "m" },
+    { id: 3, name: "Garden", sideA: 15, sideB: 23, unit: "m" },
+    { id: 4, name: "Service Closet", sideA: 165, sideB: 145, unit: "cm" }
+];
+
+function perimeters(rectangles){
+    return rectangles.map(r => 2*(r.sideA + r.sideB) + r.unit );
+}
+
+console.log(perimeters(rectangles));
